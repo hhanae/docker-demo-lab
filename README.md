@@ -6,7 +6,7 @@
 
 <h4 align="center">Welcome to the Docker Example Project! This project is designed to help you understand the basic concepts of containerization using <a href="(https://www.docker.com/)" target="_blank">Docker . architecture</a> in computer science.</h4>
 
-![Microservices_architecture](https://github.com/hhanae/microservices_demo/assets/97336261/4ceb4237-4a9c-41d7-a8c0-bb2a282ff50e)
+![Uploading 1_1P9HOcZJSa9HPm6nuslqdA.gif…]()
 
 
 <p align="center">
