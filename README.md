@@ -31,62 +31,14 @@ Before you begin, ensure you have the following installed:
 
 ## Project Structure
 
-In this Lab Project, we created two micro-services: client-service & voiture-service. Furthermore, we created a service called Eureka Server which is a service registry that enables microservices to discover and communicate with each other. Finally, we created Spring Cloud Gateway Which is a powerful and flexible API gateway that provides capabilities such as routing, filtering, and load balancing. 
+These are the important files in our lab project:
 
-Here is a simplified representation of ou Project Structure:
-```bash
-microservices-demo
-|-- Client
-|   |-- src
-|   |   |-- main
-|   |       |-- java
-|   |       |   |-- org.ensaj.clientservice
-|   |       |       |-- ClientServiceApplication.java
-|   |       |       |-- model
-|   |       |       |   |-- Client.java
-|   |       |       |-- repository
-|   |       |       |   |-- ClientRepository.java
-|   |       |       |-- service
-|   |       |           |-- ClientService.java
-|   |       |-- resources
-|   |           |-- application.properties
-|
-|-- Voiture
-|   |-- src
-|   |   |-- main
-|   |       |-- java
-|   |       |   |-- org.ensaj.voitureservice
-|   |       |       |-- VoitureServiceApplication.java
-|   |       |       |-- model
-|   |       |       |   |-- Voiture.java
-|   |       |       |-- repository
-|   |       |       |   |-- VoitureRepository.java
-|   |       |       |-- service
-|   |       |           |-- VoitureService.java
-|   |       |       |-- resources
-|   |       |           |-- application.properties
-|
-|-- eureka-server
-|   |-- src
-|   |   |-- main
-|   |       |-- java
-|   |       |   |-- org.ensaj.eurekaserver
-|   |       |       |-- EurekaServerApplication.java
-|   |       |       |-- resources
-|   |       |           |-- application.properties
-|
-|-- gateway-service
-|   |-- src
-|   |   |-- main
-|   |       |-- java
-|   |       |   |-- org.ensaj.gateway
-|   |       |       |-- GatewayServiceApplication.java
-|   |       |       |-- config
-|   |       |           |-- GatewayConfig.java
-|   |       |       |-- resources
-|   |       |           |-- application.properties
-
-```
+> Dockerfile:
+Defines the instructions for building the Docker image.
+> src/:
+Contains the application source code.
+> docker-compose.yml (if used):
+Defines services, networks, and volumes.
 
 
 ## Steps
