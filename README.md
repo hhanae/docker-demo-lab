@@ -1,7 +1,4 @@
-<img src="https://github.com/hhanae/docker-demo-lab/assets/97336261/863ae84e-5c9f-43fd-8538-f7ed51902268" width="100">
-
-
-
+<img src="https://github.com/hhanae/docker-demo-lab/assets/97336261/863ae84e-5c9f-43fd-8538-f7ed51902268" width="300">
 <h1 align="center">
   <br>
   Containerization Microservices Lab Demo
