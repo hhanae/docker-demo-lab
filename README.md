@@ -6,7 +6,7 @@
 
 <h4 align="center">Welcome to the Docker Example Project! This project is designed to help you understand the basic concepts of containerization using <a href="(https://www.docker.com/)" target="_blank">Docker . architecture</a> in computer science.</h4>
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Flevelup.gitconnected.com%2Fdockerizing-your-spring-boot-app-6fc07452c83d&psig=AOvVaw3UEJIhNkglGLIIbt7n2VEn&ust=1702072672212000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCJDqt_qo_oIDFQAAAAAdAAAAABAD" />
+![Uploading image.png…]()
 
 
 <p align="center">
