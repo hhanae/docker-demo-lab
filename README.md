@@ -1,8 +1,9 @@
-# ![Containerization Microservices Lab Demo](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
+# ![Containerization Microservices Lab Demo](https://github.com/hhanae/docker-demo-lab/assets/97336261/863ae84e-5c9f-43fd-8538-f7ed51902268)
+
 
 <h1 align="center">
   <br>
-  Microservices Lab Project
+  Containerization Microservices Lab Demo
   <br>
 </h1>
 
