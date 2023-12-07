@@ -4,27 +4,22 @@
   <br>
 </h1>
 
-<h4 align="center">Welcome to the Microservices Lab Project! This project is designed to help you understand the basic concepts of <a href="https://cloud.google.com/learn/what-is-microservices-architecture?hl=fr#:~:text=L'architecture%20de%20microservices%20(ou,%C3%A9l%C3%A9ment%20ayant%20ses%20propres%20responsabilit%C3%A9s.)" target="_blank">microservices architecture</a> in computer science.</h4>
+<h4 align="center">Welcome to the Docker Example Project! This project is designed to help you understand the basic concepts of containerization using <a href="(https://www.docker.com/)" target="_blank">Docker . architecture</a> in computer science.</h4>
 
 ![Microservices_architecture](https://github.com/hhanae/microservices_demo/assets/97336261/4ceb4237-4a9c-41d7-a8c0-bb2a282ff50e)
 
 
 <p align="center">
-  <a href="#how-it-works">Why to work with Microservices Architecture ?</a> •
+  <a href="#why-to-containerize">Why To Containerize ?</a> •
   <a href="#prerequisites">Prerequisites</a> •
-  <a href="#project_structure">Project Stucture</a> •
   <a href="#steps">Steps</a> 
 </p>
 
 
 
-## How It Works
+## Why To Containerize
 
-Microservice architecture aims to provide manageability to large, resource-intensive applications. Since each individual microservice performs one narrowly focused task (application function), they can be updated independently of other components. Thus, scaling and changing existing functionality is carried out with minimal resource consumption and downtime.
-
-As for the principles of operation of a separate microservice, it lies in the fact that when a client generates a request with the help of the user interface, which, through the API gateway, activates the microservice (or several of them) responsible for executing this request.
-
-Thus, even the most complex multi-stage tasks can be implemented with the least resource consumption. At the same time, a combination of various microservices gives companies access to solving a wide variety of problems without requiring the implementation of full-fledged software components with independent interfaces.
+Containerization offers advantages in terms of consistency, portability, scalability, and resource efficiency. These benefits make containers a valuable technology for modernizing application development and deployment workflows.
 
 
 ## Prerequisites
