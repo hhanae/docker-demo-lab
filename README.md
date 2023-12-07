@@ -1,195 +1,172 @@
 # ![Containerization Microservices Lab Demo](https://uicdn.toast.com/toastui/img/tui-editor-bi.png)
 
-> GFM  Markdown and WYSIWYG Editor - Productive and Extensible
+<h1 align="center">
+  <br>
+  Microservices Lab Project
+  <br>
+</h1>
 
-[![github release version](https://img.shields.io/github/v/release/nhn/tui.editor.svg?include_prereleases)](https://github.com/nhn/tui.editor/releases/latest) [![npm version](https://img.shields.io/npm/v/@toast-ui/editor.svg)](https://www.npmjs.com/package/@toast-ui/editor) [![license](https://img.shields.io/github/license/nhn/tui.editor.svg)](https://github.com/nhn/tui.editor/blob/master/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/nhn/tui.editor/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) [![code with hearth by NHN Cloud](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-NHN_Cloud-ff1414.svg)](https://github.com/nhn)
+<h4 align="center">Welcome to the Microservices Lab Project! This project is designed to help you understand the basic concepts of <a href="https://cloud.google.com/learn/what-is-microservices-architecture?hl=fr#:~:text=L'architecture%20de%20microservices%20(ou,%C3%A9l%C3%A9ment%20ayant%20ses%20propres%20responsabilit%C3%A9s.)" target="_blank">microservices architecture</a> in computer science.</h4>
 
-<img src="https://user-images.githubusercontent.com/37766175/121809054-446bac80-cc96-11eb-9139-08c6d9ad2d88.png" />
-
-
-## 🚩 Table of Contents
-
-- [Packages](#-packages)
-- [Why TOAST UI Editor?](#-why-toast-ui-editor)
-- [Features](#-features)
-- [Examples](#-examples)
-- [Browser Support](#-browser-support)
-- [Pull Request Steps](#-pull-request-steps)
-- [Contributing](#-contributing)
-- [TOAST UI Family](#-toast-ui-family)
-- [Used By](#-used-by)
-- [License](#-license)
+![Microservices_architecture](https://github.com/hhanae/microservices_demo/assets/97336261/4ceb4237-4a9c-41d7-a8c0-bb2a282ff50e)
 
 
-## 📦 Packages
-
-### TOAST UI Editor
-
-| Name | Description |
-| --- | --- |
-| [`@toast-ui/editor`](https://github.com/nhn/tui.editor/tree/master/apps/editor) | Plain JavaScript component |
-
-### TOAST UI Editor's Wrappers
-
-| Name | Description |
-| --- | --- |
-| [`@toast-ui/react-editor`](https://github.com/nhn/tui.editor/tree/master/apps/react-editor) | [React](https://reactjs.org/) wrapper component |
-| [`@toast-ui/vue-editor`](https://github.com/nhn/tui.editor/tree/master/apps/vue-editor) | [Vue](https://vuejs.org/) wrapper component |
-
-### TOAST UI Editor's Plugins
-
-| Name | Description |
-| --- | --- |
-| [`@toast-ui/editor-plugin-chart`](https://github.com/nhn/tui.editor/tree/master/plugins/chart) | Plugin to render chart |
-| [`@toast-ui/editor-plugin-code-syntax-highlight`](https://github.com/nhn/tui.editor/tree/master/plugins/code-syntax-highlight) | Plugin to highlight code syntax |
-| [`@toast-ui/editor-plugin-color-syntax`](https://github.com/nhn/tui.editor/tree/master/plugins/color-syntax) | Plugin to color editing text |
-| [`@toast-ui/editor-plugin-table-merged-cell`](https://github.com/nhn/tui.editor/tree/master/plugins/table-merged-cell) | Plugin to merge table columns |
-| [`@toast-ui/editor-plugin-uml`](https://github.com/nhn/tui.editor/tree/master/plugins/uml) | Plugin to render UML |
+<p align="center">
+  <a href="#how-it-works">Why to work with Microservices Architecture ?</a> •
+  <a href="#prerequisites">Prerequisites</a> •
+  <a href="#project_structure">Project Stucture</a> •
+  <a href="#steps">Steps</a> 
+</p>
 
 
-## 🤖 Why TOAST UI Editor?
 
-TOAST UI Editor provides **Markdown mode** and **WYSIWYG mode**. Depending on the type of use you want like production of *Markdown* or maybe to just edit the *Markdown*. The TOAST UI Editor can be helpful for both the usage. It offers **Markdown mode** and **WYSIWYG mode**, which can be switched any point in time.
+## How It Works
 
-### Productive Markdown Mode
+Microservice architecture aims to provide manageability to large, resource-intensive applications. Since each individual microservice performs one narrowly focused task (application function), they can be updated independently of other components. Thus, scaling and changing existing functionality is carried out with minimal resource consumption and downtime.
 
-![markdown](https://user-images.githubusercontent.com/37766175/121464762-71e2fc80-c9ef-11eb-9a0a-7b06e08d3ccb.png)
+As for the principles of operation of a separate microservice, it lies in the fact that when a client generates a request with the help of the user interface, which, through the API gateway, activates the microservice (or several of them) responsible for executing this request.
 
-**CommonMark + GFM Specifications**
-
-Today *CommonMark* is the de-facto *Markdown* standard. *GFM (GitHub Flavored Markdown)* is another popular specification based on *CommonMark* - maintained by *GitHub*, which is the *Markdown* mostly used. TOAST UI Editor follows both [*CommonMark*](http://commonmark.org/) and [*GFM*](https://github.github.com/gfm/) specifications. Write documents with ease using productive tools provided by TOAST UI Editor and you can easily open the produced document wherever the specifications are supported.
-
-* **Live Preview** : Edit Markdown while keeping an eye on the rendered HTML. Your edits will be applied immediately.
-* **Scroll Sync** : Synchronous scrolling between Markdown and Preview. You don't need to scroll through each one separately.
-* **Syntax Highlight** : You can check broken Markdown syntax immediately.
-
-### Easy WYSIWYG Mode
-
-![wysiwyg](https://user-images.githubusercontent.com/37766175/121808381-251f5000-cc93-11eb-8c47-4f5a809de2b3.png)
-
-* **Table** : Through the context menu of the table, you can add or delete columns or rows of the table, and you can also arrange text in cells.
-* **Custom Block Editor** : The custom block area can be edited through the internal editor.
-* **Copy and Paste** : Paste anything from browser, screenshot, excel, powerpoint, etc.
-
-### UI
-* **Toolbar** : Through the toolbar, you can style or add elements to the document you are editing.
-![UI](https://user-images.githubusercontent.com/37766175/121808231-767b0f80-cc92-11eb-82a0-433123746982.png)
-
-* **Dark Theme** : You can use the dark theme.
-![UI](https://user-images.githubusercontent.com/37766175/121808649-8136a400-cc94-11eb-8674-812e170ccab5.png)
-
-### Use of Various Extended Functions - Plugins
-
-![plugin](https://user-images.githubusercontent.com/37766175/121808323-d8d41000-cc92-11eb-9117-b92a435c9b43.png)
-
-CommonMark and GFM are great, but we often need more abstraction. The TOAST UI Editor comes with powerful **Plugins** in compliance with the Markdown syntax.
-
-**Five basic plugins** are provided as follows, and can be downloaded and used with npm.
-
-* [**`chart`**](https://github.com/nhn/tui.editor/tree/master/plugins/chart) : A code block marked as a 'chart' will render [TOAST UI Chart](https://github.com/nhn/tui.chart).
-* [**`code-syntax-highlight`**](https://github.com/nhn/tui.editor/tree/master/plugins/code-syntax-highlight) : Highlight the code block area corresponding to the language provided by [Prism.js](https://prismjs.com/).
-* [**`color-syntax`**](https://github.com/nhn/tui.editor/tree/master/plugins/color-syntax) : 
-Using [TOAST UI ColorPicker](https://github.com/nhn/tui.color-picker), you can change the color of the editing text with the GUI.
-* [**`table-merged-cell`**](https://github.com/nhn/tui.editor/tree/master/plugins/table-merged-cell) : 
-You can merge columns of the table header and body area.
-* [**`uml`**](https://github.com/nhn/tui.editor/tree/master/plugins/uml) : A code block marked as an 'uml' will render [UML diagrams](http://plantuml.com/screenshot).
-
-## 🎨 Features
-
-* [Viewer](https://github.com/nhn/tui.editor/tree/master/docs/en/viewer.md) : Supports a mode to display only markdown data without an editing area.
-* [Internationalization (i18n)](https://github.com/nhn/tui.editor/tree/master/docs/en/i18n.md) : Supports English, Dutch, Korean, Japanese, Chinese, Spanish, German, Russian, French, Ukrainian, Turkish, Finnish, Czech, Arabic, Polish, Galician, Swedish, Italian, Norwegian, Croatian + language and you can extend.
-* [Widget](https://github.com/nhn/tui.editor/tree/master/docs/en/widget.md) : This feature allows you to configure the rules that replaces the string matching to a specific `RegExp` with the widget node.
-* [Custom Block](https://github.com/nhn/tui.editor/tree/master/docs/en/custom-block.md) : Nodes not supported by Markdown can be defined through custom block. You can display the node what you want through writing the parsing logic with custom block.
-
-## 🐾 Examples
-
-* [Basic](https://nhn.github.io/tui.editor/latest/tutorial-example01-editor-basic)
-* [Viewer](https://nhn.github.io/tui.editor/latest/tutorial-example04-viewer)
-* [Using All Plugins](https://nhn.github.io/tui.editor/latest/tutorial-example12-editor-with-all-plugins)
-* [Creating the User's Plugin](https://nhn.github.io/tui.editor/latest/tutorial-example13-creating-plugin)
-* [Customizing the Toobar Buttons](https://nhn.github.io/tui.editor/latest/tutorial-example15-customizing-toolbar-buttons)
-* [Internationalization (i18n)](https://nhn.github.io/tui.editor/latest/tutorial-example16-i18n)
-
-Here are more [examples](https://nhn.github.io/tui.editor/latest/tutorial-example01-editor-basic) and play with TOAST UI Editor!
+Thus, even the most complex multi-stage tasks can be implemented with the least resource consumption. At the same time, a combination of various microservices gives companies access to solving a wide variety of problems without requiring the implementation of full-fledged software components with independent interfaces.
 
 
-## 🌏 Browser Support
+## Prerequisites
 
-| <img src="https://user-images.githubusercontent.com/1215767/34348387-a2e64588-ea4d-11e7-8267-a43365103afe.png" alt="Chrome" width="16px" height="16px" /> Chrome | <img src="https://user-images.githubusercontent.com/1215767/34348590-250b3ca2-ea4f-11e7-9efb-da953359321f.png" alt="IE" width="16px" height="16px" /> Internet Explorer | <img src="https://user-images.githubusercontent.com/1215767/34348380-93e77ae8-ea4d-11e7-8696-9a989ddbbbf5.png" alt="Edge" width="16px" height="16px" /> Edge | <img src="https://user-images.githubusercontent.com/1215767/34348394-a981f892-ea4d-11e7-9156-d128d58386b9.png" alt="Safari" width="16px" height="16px" /> Safari | <img src="https://user-images.githubusercontent.com/1215767/34348383-9e7ed492-ea4d-11e7-910c-03b39d52f496.png" alt="Firefox" width="16px" height="16px" /> Firefox |
-| :---------: | :---------: | :---------: | :---------: | :---------: |
-| Yes | 11+ | Yes | Yes | Yes |
+Creating a microservices project with Spring Boot involves several prerequisites. Here are the key prerequisites you'll need to set up before starting your microservices project:
+
+* Java Development Kit (JDK)
+* Integrated Development Environment (IDE) like IntelliJ IDEA
+* Knowledge of Spring Boot Features
+* Containerization Tool: DOCKER
+* Database: MySQL
 
 
-## 🔧 Pull Request Steps
+> **Note**
+> Docker is a prerequisities if you want to containerize the project. If you want just to get started with the microservices architecture without containerizing it you don't have to install Docker.
 
-TOAST UI products are open source, so you can create a pull request(PR) after you fix issues. Run npm scripts and develop yourself with the following process.
 
-### Setup
+## Project Structure
 
-Fork `main` branch into your personal repository. Clone it to local computer. Install node modules. Before starting development, you should check if there are any errors.
+In this Lab Project, we created two micro-services: client-service & voiture-service. Furthermore, we created a service called Eureka Server which is a service registry that enables microservices to discover and communicate with each other. Finally, we created Spring Cloud Gateway Which is a powerful and flexible API gateway that provides capabilities such as routing, filtering, and load balancing. 
 
-```sh
-$ git clone https://github.com/{your-personal-repo}/tui.editor.git
-$ npm install
-$ npm run build toastmark
-$ npm run test editor
+Here is a simplified representation of ou Project Structure:
+```bash
+microservices-demo
+|-- Client
+|   |-- src
+|   |   |-- main
+|   |       |-- java
+|   |       |   |-- org.ensaj.clientservice
+|   |       |       |-- ClientServiceApplication.java
+|   |       |       |-- model
+|   |       |       |   |-- Client.java
+|   |       |       |-- repository
+|   |       |       |   |-- ClientRepository.java
+|   |       |       |-- service
+|   |       |           |-- ClientService.java
+|   |       |-- resources
+|   |           |-- application.properties
+|
+|-- Voiture
+|   |-- src
+|   |   |-- main
+|   |       |-- java
+|   |       |   |-- org.ensaj.voitureservice
+|   |       |       |-- VoitureServiceApplication.java
+|   |       |       |-- model
+|   |       |       |   |-- Voiture.java
+|   |       |       |-- repository
+|   |       |       |   |-- VoitureRepository.java
+|   |       |       |-- service
+|   |       |           |-- VoitureService.java
+|   |       |       |-- resources
+|   |       |           |-- application.properties
+|
+|-- eureka-server
+|   |-- src
+|   |   |-- main
+|   |       |-- java
+|   |       |   |-- org.ensaj.eurekaserver
+|   |       |       |-- EurekaServerApplication.java
+|   |       |       |-- resources
+|   |       |           |-- application.properties
+|
+|-- gateway-service
+|   |-- src
+|   |   |-- main
+|   |       |-- java
+|   |       |   |-- org.ensaj.gateway
+|   |       |       |-- GatewayServiceApplication.java
+|   |       |       |-- config
+|   |       |           |-- GatewayConfig.java
+|   |       |       |-- resources
+|   |       |           |-- application.properties
+
 ```
 
-> TOAST UI Editor uses [npm workspace](https://docs.npmjs.com/cli/v7/using-npm/workspaces/), so you need to set the environment based on [npm7](https://github.blog/2021-02-02-npm-7-is-now-generally-available/). If subversion is used, dependencies must be installed by moving direct paths per package.
 
-### Develop
+## Steps
 
-You can see your code reflected as soon as you save the code by running a server. Don't miss adding test cases and then make green rights.
+provide you with a step-by-step guide on how to create separate Spring Boot projects for the client service, voiture service, Eureka server, and Spring Cloud Gateway.
 
-#### Run snowpack-dev-server
-[snowpack](https://www.snowpack.dev/) allows you to run a development server without bundling.
-
-``` sh
-$ npm run serve editor
-```
-
-#### Run webpack-dev-server
-If testing of legacy browsers is required, the development server can still be run using a [webpack](https://webpack.js.org/).
-
-``` sh
-$ npm run serve:ie editor
-```
-
-#### Run test
-
-``` sh
-$ npm test editor
-```
-
-### Pull Request
-
-Before uploading your PR, run test one last time to check if there are any errors. If it has no errors, commit and then push it!
-
-For more information on PR's steps, please see links in the Contributing section.
-
-## 💬 Contributing
-
-* [Code of Conduct](https://github.com/nhn/tui.editor/blob/master/CODE_OF_CONDUCT.md)
-* [Contributing Guideline](https://github.com/nhn/tui.editor/blob/master/CONTRIBUTING.md)
-* [Commit Convention](https://github.com/nhn/tui.editor/blob/master/docs/COMMIT_MESSAGE_CONVENTION.md)
-* [Issue Guidelines](https://github.com/nhn/tui.editor/tree/master/.github/ISSUE_TEMPLATE)
+### Step 1: Create a Spring Boot Project for Client MicroService
+* Open your preferred IDE (such as IntelliJ IDEA).
+* Create a new Spring Boot project, named client-service.
+* Add the necessary dependencies, including Spring Web and Spring Data JPA.
+* Create the Client entity.
+* Create Client Repository.
+* Implement the service.
+* Implement the Controller.
+* Configure the application.properties file for the Client:
+* Modify the main class:
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/186881da-86c8-407f-8914-6dafb3d8f80c)
 
 
-## 🍞 TOAST UI Family
+### Step 2: Create a Spring Boot Project for Voiture MicroService
+* Open your preferred IDE (such as IntelliJ IDEA).
+* Create a new Spring Boot project, named voiture-service
+* Add the necessary dependencies, including Spring Web and Spring Data JPA.
+* Create the Voiture entity.
+* Create Voiture Repository.
+* Implement the service.
+* Implement the Controller.
+* Configure the application.properties file for the Voiture.
+* Modify the main class:
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/c52c445d-2c6d-409b-b87d-5155e13f58d7)
 
-- [TOAST UI Calendar](https://github.com/nhn/tui.calendar)
-- [TOAST UI Chart](https://github.com/nhn/tui.chart)
-- [TOAST UI Grid](https://github.com/nhn/tui.grid)
-- [TOAST UI Image Editor](https://github.com/nhn/tui.image-editor)
-- [TOAST UI Components](https://github.com/nhn)
+### Step 3: Create a Spring Boot Project for Eureka Server
+* Open your IDE.
+* Create a new Spring Boot project.
+* Add the necessary dependencies, including Eureka Server.
+* Annotate the main class with @EnableEurekaServer:
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/8839604f-403e-49e5-a7d2-495894a691d4)
+* Configure the application.properties file for the Eureka server:
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/45da5504-c86f-465f-ad90-924e44e962d5)
+
+### Step 4: Create a Spring Boot Project for Spring Cloud Gateway
+* Open your IDE.
+* Create a new Spring Boot project.
+* Add the necessary dependencies, including Spring Cloud Gateway.
+* Create a GatewayConfig class to configure routes:
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/994c4acd-08a4-434e-8326-cd0e7bf7c5b0)
+* Configure the application.properties file for the gateway:
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/19f5a0b1-03e4-43cd-951b-49d0ba796d12)
+
+We can get sure that the microservices are saved successfully by serving this url: http://localhost:8761
+
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/afbba49c-772b-4905-9ef1-4b394afb810e)
 
 
-## 🚀 Used By
+### Step 5: Run the Eureka Server, the Gateway, the Client Microservice & the Voiture Microservice
+Browse for the microservice clients:
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/9a1206ac-475d-472f-83f2-4d2bc9460d14)
+Browse for the microservice voitures:
+![image](https://github.com/hhanae/microservices_demo/assets/97336261/a48c0937-2cde-4b92-bce2-1122937f637f)
 
-* [NHN Dooray! - Collaboration Service (Project, Messenger, Mail, Calendar, Drive, Wiki, Contacts)](https://dooray.com)
-* [UNOTES - Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=ryanmcalister.Unotes)
+
+### Step 6: Containerize the app:
+
+If you want to persue the step of containerization please go to the <a href="https://cloud.google.com/learn/what-is-microservices-architecture?hl=fr#:~:text=L'architecture%20de%20microservices%20(ou,%C3%A9l%C3%A9ment%20ayant%20ses%20propres%20responsabilit%C3%A9s.)" target="_blank">docker-lab-demo</a> repository!
 
 
-## 📜 License
+> [@hanim_hanae]([https://twitter.com/amit_merchant](https://hanim-hanae.vercel.app/)https://hanim-hanae.vercel.app/)
 
-This software is licensed under the [MIT](https://github.com/nhn/tui.editor/blob/master/LICENSE) © [NHN Cloud](https://github.com/nhn).
