@@ -24,18 +24,9 @@ Containerization offers advantages in terms of consistency, portability, scalabi
 
 ## Prerequisites
 
-Creating a microservices project with Spring Boot involves several prerequisites. Here are the key prerequisites you'll need to set up before starting your microservices project:
+Before you begin, ensure you have the following installed:
 
-* Java Development Kit (JDK)
-* Integrated Development Environment (IDE) like IntelliJ IDEA
-* Knowledge of Spring Boot Features
-* Containerization Tool: DOCKER
-* Database: MySQL
-
-
-> **Note**
-> Docker is a prerequisities if you want to containerize the project. If you want just to get started with the microservices architecture without containerizing it you don't have to install Docker.
-
+* Docker
 
 ## Project Structure
 
