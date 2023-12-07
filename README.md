@@ -34,10 +34,15 @@ Before you begin, ensure you have the following installed:
 These are the important files in our lab project:
 
 > Dockerfile:
+
 Defines the instructions for building the Docker image.
+
 > src/:
+
 Contains the application source code.
+
 > docker-compose.yml (if used):
+
 Defines services, networks, and volumes.
 
 
