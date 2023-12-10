@@ -89,10 +89,27 @@ We create a "docker-compose.yml" file in the top level of our projects and we ad
 We run thedocker-compose to build the necessary images, create the containers, and start them.
 ![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/e380c8cb-1a5e-4e49-b72b-0de97f059af3)
 
-### Step 4: Make sure all the Containers are running Correctly:
-For that, we navigate to the Eureka_Server page to make sure all the microservices are present.
+To make sure all the Containers are running Correctly, we navigate to the Eureka_Server page to make sure all the microservices are present.
 ![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/657f2f8d-7839-44d6-b5cf-d165d8913bbf)
 
+We can also browse to the Clients microservice:
+![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/40a335c8-6d21-4ee8-86ce-7c2d2caabd52)
+
+Or, to the Voitures microservice:
+![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/9d39ad10-13d6-4307-b217-45532e6ace37)
+
+### Step 4:  Pushing a Docker image to Docker Hub:
+First, we Sign In in Docker Hub and we create a repository. Second, we Tag the Docker Images before the Pushing by running this command in the root of the local repository:
+```bash
+docker tag <local_image>:latest <dockerhub_username>/<repository>:tagname
+```
+> Here we have 5 images: 
+> ![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/9e114081-0c06-41d5-9a17-2766990eda10)
+
+Then, we push the images, by running this command:
+```bash
+docker push <dockerhub_username>/<repository>:tag
+```
 
 > [@hanim_hanae]([https://twitter.com/amit_merchant](https://hanim-hanae.vercel.app/)https://hanim-hanae.vercel.app/)
 
