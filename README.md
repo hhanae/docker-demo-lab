@@ -78,18 +78,15 @@ java -jar build/libs/<the-project-name>-<x.x.x>-SNAPSHOT.jar
 
 Second, we create a dockerfile in each project and we add its associated jar:
 ```bash
-FROM openjdk:17-jdk-slim
-
-ARG JAR_FILE=target/<the-project-name>-<x.x.x>-SNAPSHOT.jar
-COPY ${JAR_FILE} <the-project-name>-<x.x.x>-SNAPSHOT.jar
-
-EXPOSE 8089
-
-ENTRYPOINT ["java", "-jar", "/<the-project-name>-<x.x.x>.jar"]
+FROM openjdk:19-alpine
+COPY target/<the-project-name>-<x.x.x>.jar
+ENTRYPOINT ["java", "-jar", "/<the-project-name>.jar"]
 ```
 ### Step 2: Creating the Docker Compose File:
+We create a "docker-compose.yml" file in the top level of our projects and we add the necessary configuration: version, services, volumes and networks.
 
 ### Step 3: Running the docker-compose.yml :
+We run thedocker-compose to build the necessary images, create the containers, and start them.
 ![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/e380c8cb-1a5e-4e49-b72b-0de97f059af3)
 
 ### Step 4: Make sure all the Containers are running Correctly:
