@@ -92,5 +92,10 @@ ENTRYPOINT ["java", "-jar", "/<the-project-name>-<x.x.x>.jar"]
 ### Step 3: Running the docker-compose.yml :
 ![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/e380c8cb-1a5e-4e49-b72b-0de97f059af3)
 
+### Step 4: Make sure all the Containers are running Correctly:
+For that, we navigate to the Eureka_Server page to make sure all the microservices are present.
+![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/657f2f8d-7839-44d6-b5cf-d165d8913bbf)
+
+
 > [@hanim_hanae]([https://twitter.com/amit_merchant](https://hanim-hanae.vercel.app/)https://hanim-hanae.vercel.app/)
 
