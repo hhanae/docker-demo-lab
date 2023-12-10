@@ -87,7 +87,10 @@ EXPOSE 8089
 
 ENTRYPOINT ["java", "-jar", "/<the-project-name>-<x.x.x>.jar"]
 ```
+### Step 2: Creating the Docker Compose File:
 
+### Step 3: Running the docker-compose.yml :
+![image](https://github.com/hhanae/docker-demo-lab/assets/97336261/e380c8cb-1a5e-4e49-b72b-0de97f059af3)
 
 > [@hanim_hanae]([https://twitter.com/amit_merchant](https://hanim-hanae.vercel.app/)https://hanim-hanae.vercel.app/)
 
